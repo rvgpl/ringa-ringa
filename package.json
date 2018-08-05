@@ -1,0 +1,19 @@
+{
+  "name": "ringa-ringa",
+  "version": "0.0.1-dev",
+  "description": "Yet another carousel ",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/rvgpl/ringa-ringa"
+  },
+  "keywords": [
+    "react",
+    "carousel"
+  ],
+  "author": "Ravigopal Kesari",
+  "license": "MIT",
+  "peerDependencies": {
+    "classnames": "^2.0.0",
+    "react": "^16.4.0"
+  }
+}

@@ -1,0 +1,23 @@
+.image-slider-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 16px;
+}
+
+.image-slide {
+  width: 100%;
+  height: 400px;
+}
+
+.image-slider-grid-item {
+  height: 400px;
+  background-color: #222;
+}
+
+img {
+  max-width: 100%;
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
