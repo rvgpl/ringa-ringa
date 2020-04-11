@@ -1,7 +1,20 @@
 {
-  "name": "ringa-ringa",
-  "version": "0.0.1-dev",
+  "name": "@rvgpl/ringa-ringa",
+  "version": "1.0.0",
   "description": "Yet another carousel ",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
+  "browser": "build/index.js",
+  "style": "build/index.css",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "gen-build": "rollup -c",
+    "clean": "rm -rf build",
+    "build": "npm run clean && npm run gen-build",
+    "publish": "npm run build && npm publish --access public"
+  },
   "repository": {
     "type": "git",
     "url": "https://www.github.com/rvgpl/ringa-ringa"
@@ -15,5 +28,28 @@
   "peerDependencies": {
     "classnames": "^2.0.0",
     "react": "^16.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^23.0.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.6",
+    "postcss": "^6.0.21",
+    "postcss-loader": "^2.1.5",
+    "precss": "^3.1.2",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-filesize": "^2.0.0",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.1.0",
+    "rollup-plugin-postcss": "^1.5.1"
   }
 }
