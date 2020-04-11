@@ -1,6 +1,6 @@
 {
   "name": "@rvgpl/ringa-ringa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet another carousel ",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
