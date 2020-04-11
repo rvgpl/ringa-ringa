@@ -1,6 +1,6 @@
 {
   "name": "@rvgpl/ringa-ringa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Yet another carousel ",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
@@ -50,6 +50,7 @@
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.1.0",
-    "rollup-plugin-postcss": "^1.5.1"
+    "rollup-plugin-postcss": "^1.5.1",
+    "autoprefixer": "^9.7.6"
   }
 }

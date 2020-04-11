@@ -40,8 +40,9 @@ const config = {
   plugins: [
     peerDepsExternal(),
     postcss({
-      extract: true,
-      plugins: [precss(), autoprefixer({ browsers: ["last 2 versions"] })],
+      extract: "build/carousel.css",
+      minimize: true,
+      plugins: [precss(), autoprefixer()],
     }),
     babel({ exclude: "node_modules/**" }),
     localResolve(),

@@ -35,30 +35,30 @@ class Carousel extends Component {
     super(props);
     const { defaultActiveItem } = props;
     this.state = {
-      activeItem: defaultActiveItem != null ? defaultActiveItem : 1
+      activeItem: defaultActiveItem != null ? defaultActiveItem : 1,
     };
     this.isPaused = false;
   }
 
-  handleIndicatorClick = index => this.setState({ activeItem: index });
+  handleIndicatorClick = (index) => this.setState({ activeItem: index });
 
   handlePrev = () =>
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
-        activeItem: prevState.activeItem === 1 ? 1 : prevState.activeItem - 1
+        activeItem: prevState.activeItem === 1 ? 1 : prevState.activeItem - 1,
       };
     });
 
   handleNext = () => {
     const totalCarouselItems = Children.count(this.props.children);
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
         activeItem:
           prevState.activeItem === totalCarouselItems
             ? this.props.infinite
               ? 1
               : totalCarouselItems
-            : prevState.activeItem + 1
+            : prevState.activeItem + 1,
       };
     });
   };
@@ -102,13 +102,13 @@ class Carousel extends Component {
       const carouselItemClasses = classNames(
         "carousel-item",
         {
-          active: this.getActiveItem() === index + 1
+          active: this.getActiveItem() === index + 1,
         },
         {
-          "carousel-item-prev": this.getActiveItem() - 1 === index + 1
+          "carousel-item-prev": this.getActiveItem() - 1 === index + 1,
         },
         {
-          "carousel-item-next": this.getActiveItem() + 1 === index + 1
+          "carousel-item-next": this.getActiveItem() + 1 === index + 1,
         }
       );
 
@@ -160,7 +160,7 @@ class Carousel extends Component {
   }
 }
 
-export default Carousel;
+export { Carousel };
 
 Carousel.defaultProps = {
   interval: 3000,
@@ -173,5 +173,5 @@ Carousel.defaultProps = {
   prevButtonComponent: <PrevButtonComponent />,
   nextButtonComponent: <NextButtonComponent />,
   infinite: false,
-  showIndicators: true
+  showIndicators: true,
 };
