@@ -13,7 +13,7 @@
     "gen-build": "rollup -c",
     "clean": "rm -rf build",
     "build": "npm run clean && npm run gen-build",
-    "publish": "npm run build && npm publish --access public"
+    "dist": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
